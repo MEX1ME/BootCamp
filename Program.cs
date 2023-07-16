@@ -330,34 +330,34 @@ Cортировка пузырьком
 
 //сортировка подсчетом
 
-int[] array = {-10, -5, -9, 0, 2, 5, 1, 3, 1, 0, 1};
+int[] array = {5, 20, 16, 8};
 int[] sortedArray = CountingSortExtended(array);
 
 //CountingSort(array);
 
 Console.WriteLine(string.Join(", ", sortedArray));
 
-void CountingSort(int[] inputArray)
-{
-    int[] counters = new int[10]; //массив повторений
+// void CountingSort(int[] inputArray)
+// {
+//     int[] counters = new int[10]; //массив повторений
 
-    for (int i = 0; i < inputArray.Length; i++)
-    {
-        counters[inputArray[i]]++;
-        // ourNumber = inputArray[i];
-        // counters[ourNumber]++;
-    }
+//     for (int i = 0; i < inputArray.Length; i++)
+//     {
+//         counters[inputArray[i]]++;
+//         // ourNumber = inputArray[i];
+//         // counters[ourNumber]++;
+//     }
 
-    int index = 0;
-    for (int i = 0; i < counters.Length; i++)
-    {
-        for (int j = 0; j < counters[i]; j++)
-        {
-            inputArray[index] = i;
-            index++;
-        }
-    }
-}
+//     int index = 0;
+//     for (int i = 0; i < counters.Length; i++)
+//     {
+//         for (int j = 0; j < counters[i]; j++)
+//         {
+//             inputArray[index] = i;
+//             index++;
+//         }
+//     }
+// }
 
 
 int[] CountingSortExtended(int[] inputArray)
@@ -368,7 +368,7 @@ int[] CountingSortExtended(int[] inputArray)
     int offset = -min;
     int[] sortedArray = new int[inputArray.Length];
     int[] counters = new int[max + offset + 1];
-
+    Console.WriteLine(max + offset + 1);
 
 
     for (int i = 0; i < inputArray.Length; i++)
